@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>UI Accessibility</title>
+  </head>
+  <body>
+    <header role="banner">
+      <a href="#"><img src="logo.svg" alt="Site logo" id="site-logo" /></a>
+      <nav aria-labelledby="mainmenulable">
+        <h2 id="mainmenulable" class="visuallyHidden">Main Menu</h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li class="has-subnav">
+            <!-- aria-haspopup="true" declares that a menu item has a submenu.
+                aria-expanded="false" declares that the submenu is hidden. -->
+            <a href="#" aria-haspopup="true" aria-expanded="false">Submenu</a>
+            <ul>
+              <li><a href="#">Submenu 1</a></li>
+              <li><a href="#">Submenu 2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main role="main">
+      <section>
+        <h2>Images</h2>
+        <img
+          src="img/manEatingBurger.jpeg"
+          alt="A man with sunglasses eating a burger"
+          height="200px"
+        />
+      </section>
+      <section>
+        <h2>Table</h2>
+        <table>
+          <tr>
+            <th scope="col">Company</th>
+            <th scope="col">Contact</th>
+            <th scope="col">Country</th>
+          </tr>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>Berglunds snabbköp</td>
+            <td>Christina Berglund</td>
+            <td>Sweden</td>
+          </tr>
+          <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+          </tr>
+          <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+          </tr>
+          <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+          </tr>
+          <tr>
+            <td>Königlich Essen</td>
+            <td>Philip Cramer</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Yoshi Tannamuri</td>
+            <td>Canada</td>
+          </tr>
+          <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+          </tr>
+          <tr>
+            <td>North/South</td>
+            <td>Simon Crowther</td>
+            <td>UK</td>
+          </tr>
+          <tr>
+            <td>Paris spécialités</td>
+            <td>Marie Bertrand</td>
+            <td>France</td>
+          </tr>
+        </table>
+      </section>
+      <section>
+        <h2>Form</h2>
+        <form>
+          <fieldset>
+            <legend>Sign up form</legend>
+            <label for="name">Name: </label><br />
+            <input type="text" name="name" id="name" /><br />
+            <label for="email">Email: </label><br />
+            <input type="email" name="email" id="email" /><br />
+            <label for="phone">Phone number: </label><br />
+            <input type="tel" name="phone" id="phone" /><br />
+            <input
+              title="Submit the sign up form"
+              value="Submit"
+              type="submit"
+            />
+          </fieldset>
+        </form>
+      </section>
+    </main>
+    <nav role="navigation"></nav>
+    <footer role="contentinfo">&copy; Þorbergur Haraldsson</footer>
+  </body>
+</html>
