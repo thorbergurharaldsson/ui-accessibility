@@ -22,3 +22,5 @@ I created a html/css page using the accessability guidelines
 [Live page](https://thorbergurharaldsson.github.io/ui-accessibility/)
 
 ## Universal design vs Inclusive Design
+
+[Report about universal and inclusive design](https://github.com/thorbergurharaldsson/ui-accessibility/blob/main/universalvsinclusive.md)
